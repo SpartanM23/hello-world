@@ -1,0 +1,27 @@
+
+entity Article {
+	id Long
+    designation String
+    description String
+    nbPoints Int
+    stock Int
+}
+entity Categorie{
+	id Long
+    nom String
+}
+
+entity Commande{
+  
+}
+relationship OneToMany {
+Article to Commande{article}
+}
+
+relationship OneToMany {
+Categorie to Article{categorie}
+}
+
+relationship ManyToOne {
+Article to Categorie{articles}
+}
